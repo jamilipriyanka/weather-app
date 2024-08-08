@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    background: #93beff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content {
+    position: relative;
+    margin-top: 100px; /* Adjust as needed */
+}
+.content h2 {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    font-size: 225px;
+}
+.content h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 3px #333;
+    filter: blur(3px);
+}
+.content h2:nth-child(3) {
+    color: #fff6;
+    filter: drop-shadow(0 15px 15px #fff);
+    z-index: 1;
+    text-shadow: -15px 15px 15px rgba(0, 0, 0, 0.2), 15px -15px 15px rgba(255,255,255,0.2);
+}
+.content h2:nth-child(2) {
+    z-index: 2;
+    color: rgba(255,255,255,0.7);
+    animation: animate 4s ease-in-out infinite;
+}
+@keyframes animate {
+    0%, 100% {
+        clip-path: polygon(0% 45%, 7% 42%, 13% 40%, 20% 41%, 26% 42%, 32% 46%, 37% 51%, 44% 53%, 51% 55%, 55% 60%, 64% 60%, 71% 62%, 80% 62%, 84% 59%, 90% 57%, 94% 55%, 98% 55%, 100% 51%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(0% 75%, 9% 75%, 19% 75%, 26% 74%, 31% 71%, 38% 68%, 42% 64%, 50% 60%, 56% 57%, 63% 54%, 69% 52%, 75% 53%, 81% 53%, 88% 54%, 91% 55%, 93% 58%, 96% 63%, 100% 67%, 100% 100%, 0% 100%);
+    }
+}
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 200px;
+}
+.zipcode, .countrycode {
+    width: 200px;
+    border-radius: 40px;
+    height: 35px;
+    border: #ffffff;
+    text-align: center;
+    box-shadow: 
+        5px 5px 10px rgba(0, 0, 0, 0.1),  /* Bottom-right shadow */
+        -5px -5px 10px rgba(0, 0, 0, 0.1), /* Top-left shadow */
+        -5px 5px 10px rgba(0, 0, 0, 0.05),  /* Bottom-left shadow */
+        5px -5px 10px rgba(0, 0, 0, 0.05);  /* Top-right shadow */
+}
+.my-button {
+    background-color: #2d4059; /* Navy Blue */
+    color: #ffffff; /* White */
+    padding: 10px 20px;
+    border: 1px solid #1c2a38;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.my-button:hover {
+    background-color: #1c2a38; /* Darker Navy on Hover */
+}
+.imp {
+    display: flex;
+    gap: 80px; /* Space between boxes */
+    margin-top: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.imp > div {
+    flex: 1;
+    min-width: 125px; /* Ensure each box has a minimum width */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.alerts, .airQuality, .sunriseSunset {
+    height: 100px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 20px;
+    box-shadow: 
+        5px 5px 10px rgba(0, 0, 0, 1),  /* Bottom-right shadow */
+        -5px -5px 10px rgba(0, 0, 0, 0.1), /* Top-left shadow */
+        -5px 5px 10px rgba(0, 0, 0, 0.5),  /* Bottom-left shadow */
+        5px -5px 10px rgba(0, 0, 0, 1);  /* Top-right shadow */
+    text-align: center;
+    align-items: center;
+    width: 250px;
+}
+.forecast {
+
+padding: 10px;
+margin-top: 80px;
+
+
+/* Adjust this value as needed */
+margin-right: auto; /* Align to the left */
+}
+.forecast-container {
+
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+.forecast-row {
+
+display: flex;
+gap: 10px;
+}
+.forecast-item {
+flex: 1;
+background-color: #fff;
+border: 1px solid #ddd;
+padding: 10px;
+border-radius: 4px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+min-width: 150px; /* Minimum width for each item */
+}
