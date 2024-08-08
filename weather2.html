@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="weather2.css">
+</head>
+<body>
+    <div class="content">
+        <h2>weather</h2>
+        <h2>weather</h2>
+        <h2>weather</h2>
+    </div>
+    <div class="section">
+        <input type="text" class="zipcode" id="zipCode" placeholder="Enter ZIP Code">
+        <input type="text" class="countrycode" id="countryCode" placeholder="Enter Country Code (e.g., IN)">
+        <button class="my-button" onclick="getWeatherData()">Get Weather Data</button>
+    </div>
+    <div class="imp">
+        <div id="alerts" class="alerts">Weather alerts will be displayed here</div>
+        <div id="airQuality" class="airQuality">Air quality index will be displayed here</div>
+        <div id="sunriseSunset" class="sunriseSunset">Sunrise and sunset times will be displayed here</div>
+    </div>
+    <div id="forecast" class="forecast">
+        <div class="forecast-container">
+         
+        </div>
+      </div>
+      <script src="weather2.js"></script>
+</body>
+</html>
